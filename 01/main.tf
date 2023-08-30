@@ -15,7 +15,7 @@ provider "aws" {
 }
 
 # Prima noastra resursa AWS
-resource "aws_vpc_new" "primul_vpc" {
+resource "aws_vpc" "primul_vpc" {
   cidr_block = "10.0.0.0/16"
 
   tags = {

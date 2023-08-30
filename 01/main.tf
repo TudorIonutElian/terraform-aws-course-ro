@@ -13,3 +13,8 @@ provider "aws" {
   shared_credentials_files = [ "~/.aws/credentials" ]
   profile = "default"
 }
+
+# Prima noastra resursa AWS
+resource "aws_vpc" "primul_vpc" {
+  cidr_block = "10.0.0.0/16"
+}

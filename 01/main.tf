@@ -65,7 +65,6 @@ resource "aws_s3_bucket" "primul_bucket" {
 }
 
 # incarcare fisier dupa creare s3 bucket
-/*
 resource "aws_s3_object" "my_object" {
   bucket = "terraform-aws-course-ro-version-bucket"
   key = "myfile.txt"
@@ -73,4 +72,3 @@ resource "aws_s3_object" "my_object" {
 
   etag = file("myfile.txt")
 }
-*/

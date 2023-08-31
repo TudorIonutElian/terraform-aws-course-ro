@@ -41,7 +41,7 @@ data "aws_ami" "ami_favorit" {
 }
 
 resource "aws_key_pair" "terraform_key_ro" {
-  name = "terraform_key_ro"
+  key_name = "terraform_key_ro"
   public_key = file("~/.ssh/terraform_key_ro.pub")
 }
 

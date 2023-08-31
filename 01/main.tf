@@ -28,7 +28,7 @@ resource "aws_vpc" "primul_vpc" {
 resource "aws_instance" "prima_instanta_ec2" {
   ami = "ami-0766f68f0b06ab145"
   instance_type = "t2.micro"
-  count = 2
+  #count = 2
 
   tags = {
     "my_first_ec2_instance_tag" = "my_first_ec2_instance__value"

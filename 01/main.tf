@@ -26,7 +26,7 @@ resource "aws_vpc" "primul_vpc" {
 
 # Prima noastra instanta ec2
 resource "aws_instance" "prima_instanta_ec2" {
-  ami = "ami-002829755fa238bfa"
+  ami = "ami-0766f68f0b06ab145"
   instance_type = "t2.micro"
 
   tags = {

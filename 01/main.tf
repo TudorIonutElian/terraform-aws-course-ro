@@ -60,6 +60,7 @@ resource "aws_instance" "prima_instanta_ec2" {
   
 }
 
+/*
 # Primul nostru S3 bucket
 resource "aws_s3_bucket" "primul_bucket" {
   bucket = "terraform-aws-course-ro-version-bucket"
@@ -78,3 +79,4 @@ resource "aws_s3_object" "my_object" {
 
   etag = file("myfile.txt")
 }
+*/

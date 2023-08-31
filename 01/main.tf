@@ -51,7 +51,7 @@ resource "aws_instance" "prima_instanta_ec2" {
   #ami = "ami-0766f68f0b06ab145"
   instance_type = "t2.micro"
   #count = 2
-  key_name = aws_key_pair.terraform_course_ro.key_name
+  key_name = aws_key_pair.terraform_key_ro.key_name
 
   tags = {
     "my_first_ec2_instance_tag" = "my_first_ec2_instance__value"

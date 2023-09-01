@@ -54,6 +54,8 @@ resource "aws_instance" "prima_instanta_ec2" {
   #count = 2
   key_name = aws_key_pair.terraform_key_ro.key_name
 
+  user_data = file(".entry.sh")
+
   tags = {
     "my_first_ec2_instance_tag" = "my_first_ec2_instance__value"
     "my_second_ec2_instance_tag" = "my_second_ec2_instance_tag_value"

@@ -17,6 +17,7 @@ provider "aws" {
 # Prima noastra resursa AWS
 resource "aws_vpc" "primul_vpc" {
   cidr_block = "10.0.0.0/16"
+  count = var.numar_de_instante
 
   tags = {
     "my_first_tag" = "my_first_tag_value"

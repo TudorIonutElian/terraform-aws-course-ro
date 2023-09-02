@@ -51,7 +51,7 @@ resource "aws_instance" "prima_instanta_ec2" {
   ami = data.aws_ami.ami_favorit.id
   #ami = "ami-0766f68f0b06ab145"
   instance_type = var.ec2_instance_type
-  #count = 2
+  #count = 2 "dwadadaw" count = var.my_bla_variable
   key_name = aws_key_pair.terraform_key_ro.key_name
 
   user_data = "${file("entry.sh")}"
@@ -60,6 +60,7 @@ resource "aws_instance" "prima_instanta_ec2" {
     "my_first_ec2_instance_tag" = "my_first_ec2_instance__value"
     "my_second_ec2_instance_tag" = "my_second_ec2_instance_tag_value"
     "my_first_custom_tag" = var.my_first_custom_tag
+    "true_or_false" = var.is_development ? "true" : "false"
   }
   
 }

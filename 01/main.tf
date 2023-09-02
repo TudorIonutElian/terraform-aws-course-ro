@@ -50,7 +50,7 @@ resource "aws_key_pair" "terraform_key_ro" {
 resource "aws_instance" "prima_instanta_ec2" {
   ami = data.aws_ami.ami_favorit.id
   #ami = "ami-0766f68f0b06ab145"
-  instance_type = "t2.micro"
+  instance_type = var.ec2_instance_type
   #count = 2
   key_name = aws_key_pair.terraform_key_ro.key_name
 
@@ -59,6 +59,7 @@ resource "aws_instance" "prima_instanta_ec2" {
   tags = {
     "my_first_ec2_instance_tag" = "my_first_ec2_instance__value"
     "my_second_ec2_instance_tag" = "my_second_ec2_instance_tag_value"
+    "my_first_custom_tag" = var.my_first_custom_tag
   }
   
 }

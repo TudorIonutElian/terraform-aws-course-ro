@@ -3,3 +3,8 @@ variable "numar_de_instante" {
     type = number
     default = 2
 }
+
+variable "ec2_instance_type" {
+  description = "Ec2 instance type"
+  type = string
+}

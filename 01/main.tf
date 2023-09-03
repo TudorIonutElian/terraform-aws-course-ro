@@ -57,9 +57,9 @@ resource "aws_instance" "prima_instanta_ec2" {
   user_data = "${file("entry.sh")}"
 
   tags = {
-    "tag_1" = var.my_first_custom_tag[0]
-    "tag_2" = var.my_first_custom_tag[1]
-    "tag_3" = var.my_first_custom_tag[2]
+    "tag_1" = var.my_custom_tags[0]
+    "tag_2" = var.my_custom_tags[1]
+    "tag_3" = var.my_custom_tags[2]
   }
   
 }

@@ -51,3 +51,10 @@ variable "my_object" {
     second_tag_object = "second_tag_object_value"
   }
 }
+
+variable "my_instance" {
+  description = "Prima mea variabila tuple"
+  type = tuple([ string, number, bool ])
+
+  default = [ "t2.micro", 2, true ]
+}

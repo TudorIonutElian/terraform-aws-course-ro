@@ -50,15 +50,14 @@ resource "aws_key_pair" "terraform_key_ro" {
 resource "aws_instance" "prima_instanta_ec2" {
   ami = data.aws_ami.ami_favorit.id
   #ami = "ami-0766f68f0b06ab145"
-  instance_type = var.ec2_instance_type
-  #count = 2 "dwadadaw" count = var.my_bla_variable
+  instance_type = var.my_instance[0]
+  count = var.my_instance[0]
   key_name = aws_key_pair.terraform_key_ro.key_name
 
   user_data = "${file("entry.sh")}"
 
   tags = {
-    "tag_1" = var.my_object["first_tag_object"]
-    "tag_2" = var.my_object["second_tag_object"]
+    "Contine Bool" = var.my_instance[2] ? "my instance contine bool" : "my instance nu contine bool"
   }
   
 }

@@ -51,7 +51,7 @@ resource "aws_instance" "prima_instanta_ec2" {
   ami = data.aws_ami.ami_favorit.id
   #ami = "ami-0766f68f0b06ab145"
   instance_type = var.my_instance[0]
-  count = var.my_instance[0]
+  count = var.my_instance[1]
   key_name = aws_key_pair.terraform_key_ro.key_name
 
   user_data = "${file("entry.sh")}"

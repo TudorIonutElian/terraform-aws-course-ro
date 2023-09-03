@@ -35,5 +35,20 @@ variable "my_custom_map" {
     "my_custom_map_tag_2" = "my_custom_map_tag_2_value"
     "my_custom_map_tag_3" = "my_custom_map_tag_3_value"
   }
+}
+
+
+variable "my_object" {
+  description = "Prima variabila object"
+
+  type = object({
+    first_tag_object = string
+    second_tag_object = string
+  })
+
+  default = {
+    first_tag_object = "first_tag_object_value"
+    second_tag_object = "second_tag_object_value"
+  }
   
 }

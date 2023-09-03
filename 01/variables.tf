@@ -25,3 +25,15 @@ variable "my_custom_tags" {
   type = list(string)
   default = [ "my_first_tag", "my_second_tag", "my_third_tag" ]
 }
+
+variable "my_custom_map" {
+  description = "Primul meu map in terraform"
+  type = map(string)
+
+  default = {
+    "my_custom_map_tag_1" = "my_custom_map_tag_1_value"
+    "my_custom_map_tag_2" = "my_custom_map_tag_2_value"
+    "my_custom_map_tag_3" = "my_custom_map_tag_3_value"
+  }
+  
+}

@@ -57,10 +57,9 @@ resource "aws_instance" "prima_instanta_ec2" {
   user_data = "${file("entry.sh")}"
 
   tags = {
-    "my_first_ec2_instance_tag" = "my_first_ec2_instance__value"
-    "my_second_ec2_instance_tag" = "my_second_ec2_instance_tag_value"
-    "my_first_custom_tag" = var.my_first_custom_tag
-    "true_or_false" = var.is_development ? "true" : "false"
+    "tag_1" = var.my_first_custom_tag[0]
+    "tag_2" = var.my_first_custom_tag[1]
+    "tag_3" = var.my_first_custom_tag[2]
   }
   
 }

@@ -19,3 +19,9 @@ variable "is_development" {
   type = bool
   default = true
 }
+
+variable "my_custom_tags" {
+  description = "Simple list in Terraform"
+  type = list(string)
+  default = [ "my_first_tag", "my_second_tag", "my_third_tag" ]
+}

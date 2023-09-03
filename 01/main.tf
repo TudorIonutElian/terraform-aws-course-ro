@@ -57,9 +57,8 @@ resource "aws_instance" "prima_instanta_ec2" {
   user_data = "${file("entry.sh")}"
 
   tags = {
-    "tag_1" = var.my_custom_map["my_custom_map_tag_1"]
-    "tag_2" = var.my_custom_map["my_custom_map_tag_2"]
-    "tag_3" = var.my_custom_map["my_custom_map_tag_3"]
+    "tag_1" = var.my_object["first_tag_object"]
+    "tag_2" = var.my_object["second_tag_object"]
   }
   
 }

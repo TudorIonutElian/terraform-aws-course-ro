@@ -50,5 +50,4 @@ variable "my_object" {
     first_tag_object = "first_tag_object_value"
     second_tag_object = "second_tag_object_value"
   }
-  
 }

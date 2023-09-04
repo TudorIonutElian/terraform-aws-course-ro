@@ -14,6 +14,22 @@ provider "aws" {
   profile = "default"
 }
 
+resource "aws_iam_user" "my_user" {
+  name = "my-user-nume"
+  path = "/"
+
+  count = 3
+
+  tags = {
+    "nume" = "my-user-tag-nume"
+  }
+}
+
+
+
+
+
+/*
 # Prima noastra resursa AWS
 resource "aws_vpc" "primul_vpc" {
   cidr_block = "10.0.0.0/16"
@@ -41,6 +57,7 @@ data "aws_ami" "ami_favorit" {
   }
 }
 
+
 resource "aws_key_pair" "terraform_key_ro" {
   key_name = "terraform_key_ro"
   public_key = file("~/.ssh/terraform_key_ro.pub")
@@ -64,7 +81,6 @@ resource "aws_instance" "prima_instanta_ec2" {
   
 }
 
-/*
 # Primul nostru S3 bucket
 resource "aws_s3_bucket" "primul_bucket" {
   bucket = "terraform-aws-course-ro-version-bucket"

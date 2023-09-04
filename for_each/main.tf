@@ -20,7 +20,7 @@ resource "aws_iam_user" "my_user" {
   name = "${element(var.utilizatori, count.index)}"
   path = "/"
 
-  count = "${lenth(var.utilizatori)}"
+  count = "${length(var.utilizatori)}"
 
   tags = {
     "nume" = "my-user-tag-nume"

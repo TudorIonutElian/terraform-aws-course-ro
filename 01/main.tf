@@ -58,7 +58,7 @@ resource "aws_instance" "prima_instanta_ec2" {
 
   tags = {
     "Contine Bool" = var.my_instance[2] ? "my instance contine bool" : "my instance nu contine bool"
-    "Contine NULL" = var.check_null ? "Exista ceva" : "Nu exista ceva"
+    "Contine NULL" = null
   }
   
 }

@@ -59,7 +59,3 @@ variable "my_instance" {
   default = [ "t2.micro", 2, true ]
 }
 
-variable "check_null" {
-   description = "Prima mea variabila null"
-   type = null
-}

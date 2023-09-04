@@ -17,12 +17,13 @@ provider "aws" {
 
 
 resource "aws_iam_user" "my_user" {
-  for_each = toset(var.utilizatori)
-  name = each.key
+  name = "${element(var.utilizatori, count.index)}"
   path = "/"
 
+  count = "${length(var.utilizatori)}"
+
   tags = {
-    "nume" = "my-user-tag-${each.key}"
+    "nume" = "my-user-tag-nume"
   }
 }
 

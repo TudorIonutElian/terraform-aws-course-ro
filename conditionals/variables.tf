@@ -1,4 +1,4 @@
-variable "numarDeUtilizator" {
-  type = number
-  default = 2
+variable "utilizatori" {
+  type = bool
+  default = true
 }

@@ -1,4 +1,4 @@
-variable "numar_de utilizatori" {
+variable "numarDeUtilizator" {
   type = number
   default = 2
 }

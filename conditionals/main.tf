@@ -20,11 +20,11 @@ resource "aws_iam_user" "my_user" {
   name = "user"
   path = "/"
 
-  count = "${length(var.utilizatori)}"
+  #count = "${length(var.utilizatori)}"
 
   tags = {
     "nume" = "my-user-tag-nume"
-    "numar_de_utilizatori" = length(var.utilizatori) > 5 ? "mai mult de 5 utilizatoir" : "mai putin de 5 utilizator"
+    "numar_de_utilizatori" = length(var.utilizatori) > 5 ? "mai mult de 5 utilizatoir" : "mai putin de 5 utilizatori"
   }
 }
 

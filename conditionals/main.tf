@@ -24,7 +24,7 @@ resource "aws_iam_user" "my_user" {
 
   tags = {
     "nume" = "my-user-tag-nume"
-    "numar_de_utilizatori" = var.numarDeUtilizator == true ? "mai mult de 5 utilizatori" : "mai putin de 5 utilizatori"
+    "numar_de_utilizatori" = var.utilizatori == true ? "mai mult de 5 utilizatori" : "mai putin de 5 utilizatori"
   }
 }
 

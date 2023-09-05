@@ -1,4 +1,4 @@
 variable "utilizatori" {
   type = bool
-  default = true
+  default = false
 }

@@ -7,10 +7,10 @@ terraform {
   }
 
   cloud {
-    organization = "TerraformAWSCourseRo"
+    organization = "IonutElianTudorOrganization"
 
     workspaces {
-      name = "aws-course-tf-ro-latest-latest"
+      name = "terraform-aws-course-ro-workspace-learning"
     }
   }
 }

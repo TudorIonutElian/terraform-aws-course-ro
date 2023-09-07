@@ -15,7 +15,7 @@ provider "aws" {
 }
 
 data "aws_secretsmanager_secret_version" "db_credentials_aws" {
-  secret_id     = "education_db_credentials"
+  secret_id     = "education_db_credentials_2"
 }
 
 locals {

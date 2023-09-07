@@ -26,7 +26,7 @@ resource "aws_db_instance" "education" {
   instance_class         = "db.t3.micro"
   allocated_storage      = 5
   engine                 = "postgres"
-  username               = local.database_credentials.username
+  username               = local.database_credentials.user
   password               = local.database_credentials.password
   publicly_accessible    = true
   skip_final_snapshot    = true

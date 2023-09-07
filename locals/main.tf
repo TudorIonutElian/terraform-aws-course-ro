@@ -21,6 +21,6 @@ resource "aws_iam_user" "my_user" {
   count = 3
 
   tags = {
-    "tag" = var.locals.tag
+    "tag" = locals.tag
   }
 }

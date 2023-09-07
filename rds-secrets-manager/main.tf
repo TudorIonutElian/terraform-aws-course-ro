@@ -14,7 +14,7 @@ provider "aws" {
   profile = "default"
 }
 
-resource "aws_secretsmanager_secret_version" "db_credentials_aws" {
+data "aws_secretsmanager_secret_version" "db_credentials_aws" {
   secret_id     = "education_db_credentials"
 }
 

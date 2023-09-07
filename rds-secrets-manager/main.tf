@@ -19,7 +19,7 @@ resource "aws_secretsmanager_secret_version" "db_credentials_aws" {
 }
 
 locals {
-  database_credentials = jsondecode(aws_secretsmanager_secret_version.db_credentials_aws.secret_string)
+  database_credentials = jsondecode(data.aws_secretsmanager_secret_version.db_credentials_aws.secret_string)
 }
 
 resource "aws_db_instance" "education" {
